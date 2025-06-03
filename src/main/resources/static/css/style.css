@@ -227,9 +227,39 @@ a {
     cursor: pointer;
 }
 
+/* Menu Bar */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(5, 5, 16, 0.95);
+    padding: 1rem 2rem;
+    z-index: 99;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+}
+.mobile-menu-btn.open i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    min-width: 55vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -559,6 +589,7 @@ a {
 
 /* About Section */
 .section {
+    min-width: 55vh;
     padding: 8rem 0;
     position: relative;
 }
@@ -735,8 +766,15 @@ a {
   display: contents; /* Ensures it continues inside the grid */
 }
 
+/* Toogle Button */
 .hidden {
   display: none;
+}
+
+.toggle-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .toggle-button {
@@ -935,6 +973,7 @@ a {
     background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
     top: 0;
     bottom: 0;
+    margin-bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -1254,6 +1293,7 @@ textarea.form-control {
     padding: 5rem 0 2rem;
     position: relative;
     z-index: 1;
+    min-width: 55vh;
 }
 
 .footer-container {
@@ -1334,12 +1374,19 @@ textarea.form-control {
 
 /* Media Queries */
 @media (max-width: 1200px) {
+    .hero, .section, .footer{
+        min-width: 95vh;
+    }
     .hero-title {
         font-size: 3.5rem;
     }
 
     .hero-subtitle {
         font-size: 1.5rem;
+    }
+    .hero-description{
+        position: relative;
+        left: 40px;
     }
 
     .hero-visual-inner {
@@ -1350,12 +1397,24 @@ textarea.form-control {
     .section-title {
         font-size: 2.5rem;
     }
+    
+    .skills-container{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
 }
 
 @media (max-width: 992px) {
+    .hero, .section, .footer{
+        min-width: 75vh;
+    }
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .hero-description {
+        position: relative;
+        left: 146px;
     }
 
     .hero-greeting {
@@ -1398,7 +1457,7 @@ textarea.form-control {
     }
 
     .timeline-date {
-        top: -40px;
+        top: -13px;
         left: 0 !important;
         right: auto !important;
     }
@@ -1411,9 +1470,13 @@ textarea.form-control {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    
 }
 
 @media (max-width: 768px) {
+    .hero, .section, .footer{
+        min-width: 90vh;
+    }
     .header-container {
         padding: 0 1rem;
     }
@@ -1438,6 +1501,12 @@ textarea.form-control {
         padding: 0.8rem;
     }
 
+    .hero-description {
+        position: relative;
+        left: 70px;
+    }
+
+
     .section {
         padding: 5rem 0;
     }
@@ -1453,6 +1522,7 @@ textarea.form-control {
     .contact-form {
         padding: 2rem;
     }
+    
 }
 
 @media (max-width: 576px) {
@@ -1480,4 +1550,7 @@ textarea.form-control {
     .timeline-content {
         padding: 1.5rem;
     }
+
 }
+
+
