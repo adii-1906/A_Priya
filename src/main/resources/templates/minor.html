@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Projects - Aditi Priya</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: site-header}"></div>
+
+<main>
+    <section class="section projects" style="padding-top: 10rem;">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Minor Projects & Demos</h2>
+                <p class="section-subtitle">
+                    A showcase of smaller applications, technical demos, and various tools.
+                </p>
+            </div>
+
+            <div th:replace="~{fragments/minor-projects :: minor-projects-grid}"></div>
+
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: footer-section}"></div>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

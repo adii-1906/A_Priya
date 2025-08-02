@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <th:block th:fragment="projects-grid">
+        <div class="projects-container">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img th:src="@{/images/thumbnail5.jpg}" alt="QuickBlog">
+                    <div class="project-overlay"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Express</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">QuickBlog</h3>
+                    <p class="project-description">
+                        A fast and minimalist blogging platform for quick content sharing and reading.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/adii-1906/Blog-app" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://blog-quick.vercel.app/" class="project-link" target="_blank">
+                            Visit Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img th:src="@{/images/thumbnail7.jpg}" alt="Forever E-commerce">
+                    <div class="project-overlay"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Express</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Stripe</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Forever</h3>
+                    <p class="project-description">
+                        Forever is an innovative online shopping platform offering a diverse range of high-quality products with a focus on convenience and customer satisfaction.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/adii-1906/E-commerce" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://forever-ap.vercel.app/" class="project-link" target="_blank">
+                            Visit Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </th:block>
+</body>
+</html>

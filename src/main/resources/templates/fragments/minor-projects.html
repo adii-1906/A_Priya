@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <th:block th:fragment="minor-projects-grid">
+        <div class="projects-container">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img th:src="@{/images/thumbnail3.png}" alt="Spotify Clone">
+                    <div class="project-overlay"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">React Icons</span>
+                        <span class="project-tag">Vercel</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Spotify Clone 🎶</h3>
+                    <p class="project-description">
+                        A sleek and responsive Spotify clone that lets users explore, play, and enjoy music with a real-time audio player and modern UI.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/adii-1906/Spotify-clone" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://spotify-clone-ap.vercel.app/" class="project-link" target="_blank">
+                            Visit Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+    </th:block>
+</body>
+</html>
